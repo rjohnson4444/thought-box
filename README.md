@@ -1,4 +1,4 @@
-== ThoughtBox
+## ThoughtBox
 
 A Rails application to keep track of your thoughts!
 
