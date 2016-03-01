@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/home', to: 'home#index'
 
   resources :users, only: [:new, :index, :create]
-  resources :links, only: [:index]
+  resources :links, only: [:index, :create]
 end
