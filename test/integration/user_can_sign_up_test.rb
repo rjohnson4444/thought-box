@@ -4,8 +4,6 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
   test "unauthenticated user can see login and sign up links at root" do
     visit root_path
 
-    # assert_equal '/', current_path
-
     assert page.has_link?("Login")
     assert page.has_link?("Sign Up")
   end
@@ -14,7 +12,6 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
     prev_user_count = User.count
     visit root_path
 
-    # assert_equal '/', current_path
     assert_equal User.count, prev_user_count
 
     click_link("Sign Up")
@@ -33,8 +30,6 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
   test "unauthenticated user cannot signup when password confirmation does not match password" do
     prev_user_count = User.count
     visit root_path
-
-    # assert_equal '/', current_path
 
     click_link("Sign Up")
 

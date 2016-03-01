@@ -1,2 +1,13 @@
-<%= link_to "Logout", logout_path, method: :delete %>
+<%= link_to "Sign Out", logout_path, method: :delete %>
 <h1>Welcome to Links page</h1>
+
+<h3>Submit a Link</h3>
+
+<%= form_for(Link.new) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+  <%= f.submit "Create Link" %>
+<% end %>
+
