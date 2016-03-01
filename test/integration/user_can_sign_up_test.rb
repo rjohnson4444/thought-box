@@ -6,7 +6,7 @@ class UserCanSignUpTest < ActionDispatch::IntegrationTest
 
     # assert_equal '/', current_path
 
-    assert page.has_link?("Log In")
+    assert page.has_link?("Login")
     assert page.has_link?("Sign Up")
   end
 
